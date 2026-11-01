@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>The Royal Drape | Luxury Saree Boutique</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            THE ROYAL DRAPE
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#collections">Collections</a>
+            <a href="#experience">Virtual Experience</a>
+            <a href="#story">Our Story</a>
+        </nav>
+
+        <button class="bag-button" id="bagButton">
+            BAG (<span id="bagCount">0</span>)
+        </button>
+
+    </header>
+
+
+    <!-- CINEMATIC HOMEPAGE -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="eyebrow">
+                A CELEBRATION OF INDIAN HERITAGE
+            </span>
+
+            <h1>
+                Six Yards.<br>
+                <em>A Thousand Stories.</em>
+            </h1>
+
+            <p>
+                Discover timeless elegance through
+                handcrafted sarees designed to celebrate
+                every beautiful moment.
+            </p>
+
+            <a href="#collections" class="gold-button">
+                EXPLORE COLLECTION
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="images/burgundy.jpg"
+                 alt="Luxury burgundy silk saree">
+        </div>
+
+        <div class="scroll-indicator">
+            SCROLL TO EXPLORE ↓
+        </div>
+
+    </section>
+
+
+    <!-- COLLECTIONS -->
+
+    <section class="collections" id="collections">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                CURATED WITH LOVE
+            </span>
+
+            <h2>Our Signature Collection</h2>
+
+            <p>
+                Every weave tells a story of tradition,
+                artistry and timeless beauty.
+            </p>
+
+        </div>
+
+        <div class="product-grid">
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/burgundy.jpg"
+                         alt="Burgundy Banarasi saree">
+                </div>
+
+                <h3>Royal Burgundy Banarasi</h3>
+
+                <p>₹8,499</p>
+
+                <button onclick="openExperience('burgundy')">
+                    EXPERIENCE THIS SAREE →
+                </button>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/emerald.jpg"
+                         alt="Emerald silk saree">
+                </div>
+
+                <h3>Emerald Heritage Silk</h3>
+
+                <p>₹9,299</p>
+
+                <button onclick="openExperience('emerald')">
+                    EXPERIENCE THIS SAREE →
+                </button>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/royal-blue.jpg"
+                         alt="Royal blue saree">
+                </div>
+
+                <h3>Midnight Royal Silk</h3>
+
+                <p>₹7,999</p>
+
+                <button onclick="openExperience('blue')">
+                    EXPERIENCE THIS SAREE →
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIRTUAL SAREE EXPERIENCE -->
+
+    <section class="experience" id="experience">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                AN IMMERSIVE SHOPPING JOURNEY
+            </span>
+
+            <h2>The Drape Experience</h2>
+
+            <p>
+                Explore every detail before finding
+                your perfect drape.
+            </p>
+
+        </div>
+
+
+        <!-- STEP INDICATORS -->
+
+        <div class="steps">
+
+            <span class="step active" data-step="1">01 Reveal</span>
+
+            <span class="step" data-step="2">02 Colour</span>
+
+            <span class="step" data-step="3">03 Fabric</span>
+
+            <span class="step" data-step="4">04 Preview</span>
+
+            <span class="step" data-step="5">05 Shopping</span>
+
+        </div>
+
+
+        <div class="experience-container">
+
+            <!-- MAIN PRODUCT IMAGE -->
+
+            <div class="experience-visual">
+
+                <img id="sareeImage"
+                     src="images/burgundy.jpg"
+                     alt="Selected saree">
+
+            </div>
+
+
+            <!-- INTERACTIVE CONTENT -->
+
+            <div class="experience-content">
+
+                <span class="eyebrow" id="stepLabel">
+                    STEP 01 / 05
+                </span>
+
+                <h2 id="experienceTitle">
+                    Discover Your Saree
+                </h2>
+
+                <p id="experienceDescription">
+                    Experience the elegance of handcrafted
+                    Indian silk.
+                </p>
+
+
+                <!-- STEP 1 -->
+
+                <div class="step-panel active" id="panel1">
+
+                    <h3 id="productName">
+                        Royal Burgundy Banarasi
+                    </h3>
+
+                    <p id="productPrice">₹8,499</p>
+
+                    <p>
+                        A timeless masterpiece inspired
+                        by royal Indian craftsmanship.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+
+                <div class="step-panel" id="panel2">
+
+                    <h3>Choose Your Colour</h3>
+
+                    <p>
+                        Explore our carefully selected
+                        royal colour palette.
+                    </p>
+
+                    <div class="color-options">
+
+                        <button
+                            class="color burgundy selected"
+                            onclick="changeColor('burgundy')"
+                            aria-label="Burgundy">
+                        </button>
+
+                        <button
+                            class="color emerald"
+                            onclick="changeColor('emerald')"
+                            aria-label="Emerald">
+                        </button>
+
+                        <button
+                            class="color blue"
+                            onclick="changeColor('blue')"
+                            aria-label="Royal Blue">
+                        </button>
+
+                    </div>
+
+                    <p id="selectedColor">
+                        Selected: Royal Burgundy
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+
+                <div class="step-panel" id="panel3">
+
+                    <h3>Explore The Fabric</h3>
+
+                    <p>
+                        Discover intricate craftsmanship,
+                        beautiful texture and exquisite
+                        detailing.
+                    </p>
+
+                    <button class="outline-button"
+                            onclick="zoomFabric()">
+
+                        EXPLORE FABRIC DETAILS
+
+                    </button>
+
+                    <p class="hint">
+                        Move your cursor over the image
+                        to explore its details.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+
+                <div class="step-panel" id="panel4">
+
+                    <h3>See The Complete Look</h3>
+
+                    <p>
+                        Experience how this beautiful
+                        saree looks when elegantly draped.
+                    </p>
+
+                    <button class="outline-button"
+                            onclick="showModel()">
+
+                        VIEW ON MODEL
+
+                    </button>
+
+                </div>
+
+
+                <!-- STEP 5 -->
+
+                <div class="step-panel" id="panel5">
+
+                    <h3>Your Perfect Drape Awaits</h3>
+
+                    <p id="finalProduct">
+                        Royal Burgundy Banarasi
+                    </p>
+
+                    <h3 id="finalPrice">₹8,499</h3>
+
+                    <button class="gold-button"
+                            onclick="addToBag()">
+
+                        ADD TO BAG
+
+                    </button>
+
+                    <button class="outline-button"
+                            onclick="whatsappEnquiry()">
+
+                        ENQUIRE ON WHATSAPP
+
+                    </button>
+
+                </div>
+
+
+                <!-- NAVIGATION BUTTONS -->
+
+                <div class="experience-navigation">
+
+                    <button id="previousButton"
+                            onclick="previousStep()">
+
+                        ← PREVIOUS
+
+                    </button>
+
+                    <button id="nextButton"
+                            onclick="nextStep()">
+
+                        NEXT STEP →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BRAND STORY -->
+
+    <section class="story" id="story">
+
+        <span class="eyebrow">
+            OUR HERITAGE
+        </span>
+
+        <h2>
+            Woven With Tradition.<br>
+            Draped With Love.
+        </h2>
+
+        <p>
+            We believe a saree is more than an outfit.
+            It is a celebration of memories, culture,
+            confidence and timeless Indian elegance.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>THE ROYAL DRAPE</h2>
+
+        <p>Six Yards. A Thousand Stories.</p>
+
+        <p>© 2026 The Royal Drape. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- SHOPPING BAG -->
+
+    <div class="bag-overlay" id="bagOverlay">
+
+        <div class="bag-modal">
+
+            <button id="closeBag" class="close-button">
+                ×
+            </button>
+
+            <h2>Your Shopping Bag</h2>
+
+            <div id="bagItems"></div>
+
+            <h3 id="bagTotal">Total: ₹0</h3>
+
+            <button class="gold-button"
+                    onclick="checkoutWhatsApp()">
+
+                ENQUIRE ABOUT MY BAG
+
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
